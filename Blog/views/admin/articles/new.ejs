@@ -1,0 +1,30 @@
+<%- include('../../partials/header.ejs')%>
+<%- include('../../partials/navbar.ejs')%>
+
+
+<div class="container">
+    <form action="/articles/save" method="POST">
+        <hr>
+        <h2>Cadastro de Artigo</h2>
+        <hr>
+
+        <input type="text" class="form-control mt-5 mb-5" name="title" placeholder="Defina um nome para o artigo">
+        <textarea class="form-control" name="body" id="body" cols="30" rows="10"></textarea>
+        <select name="category" id="category" class="form-control mt-5">
+            <%categories.forEach((category)=>{%>
+
+          
+            <option value="<%=category.id%>"><%=category.title%></option>
+
+       <% })%>
+        </select>
+        <button class="btn btn-success mt-5">Cadastrar</button>
+    </form>
+</div>
+
+
+
+
+
+
+<%- include('../../partials/footer.ejs')%>

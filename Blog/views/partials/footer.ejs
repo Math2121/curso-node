@@ -1,0 +1,27 @@
+
+
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+
+<script src="https://cdn.tiny.cloud/1/vms6bbsep2anhqny2091dxfcumsybmvo8f81e42txv1b9vil/tinymce/5/tinymce.min.js" referrerpolicy="origin"/></script>
+<script>
+    tinymce.init({
+      selector: '#body',
+      language:'pt_BR',
+      plugins:[
+          'advlist autolink link image lists print preview hr searchreplace wordcount fullscreen insertdatetime media save table paste emoticons'
+      ],
+      init_instance_callback:()=>{
+        tinymce.get("body").setContent($("#content").html())
+      }
+    });
+  </script>
+</body>
+</html>
